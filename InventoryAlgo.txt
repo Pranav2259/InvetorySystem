@@ -1,0 +1,74 @@
+STEP 1 : This class is in PACKAGE basics.
+STEP 2 : IMPORT java.util.*.
+STEP 3 : IMPORT java.io.*.
+STEP 4 : A abstract class AbstractMethods is created.
+	STEP 5 : The member method abstract void signUp() is called.
+	STEP 6 : The member method abstract void purchase_item() is called.
+STEP 7 : A class User which inherits from class AbstractMethods is created.
+	STEP 8 : STRING ufname,uname.
+	STEP 9 : STRING pass,age.
+	STEP 10 : INT tno,mtchoice,mchoice.
+	STEP 11 : A method VOID signUp() is created.
+		STEP 12 : An object of class Scanner u is created with value Scanner(System.in).
+		STEP 13 : TRY.
+			STEP 14 : An object of class File f is created with value File("signUp.txt").
+			STEP 15 : An object of class FileWriter fout is created with value FileWriter(f).
+			STEP 16 : An object of class BufferedWriter bout is created with value BufferedWriter(fout).
+			STEP 17 : PRINT "\nYour Full Name is = ".
+			STEP 18 : ufname ? u.nextLine().
+			STEP 19 : The function write(ufname) from object bout is called.
+			STEP 20 : The function newLine() from object bout is called.
+			STEP 21 : PRINT "\nNow Please make a Username: ".
+			STEP 22 : uname ? u.next().
+			STEP 23 : The function write(uname) from object bout is called.
+			STEP 24 : The function newLine() from object bout is called.
+			STEP 25 : PRINT "\nCreate a Password = ".
+			STEP 26 : pass ? u.next().
+			STEP 27 : The function write(pass) from object bout is called.
+			STEP 28 : The function newLine() from object bout is called.
+			STEP 29 : PRINT "\nEnter Your Age = ".
+			STEP 30 : age ? u.next().
+			STEP 31 : The function write(age) from object bout is called.
+			STEP 32 : The function newLine() from object bout is called.
+			STEP 33 : PRINT "\n\n\t--- Thanks for your sign up ---".
+			STEP 34 : The function close() from object bout is called.
+		STEP 35 : CATCH(Exception e).
+			STEP 36 : The function printStackTrace() from object e is called.
+	STEP 37 : A method VOID purchase_item() is created.
+		STEP 38 : An object of class Scanner b is created with value Scanner(System.in).
+		STEP 39 : TRY.
+			STEP 40 : An object of class BufferedReader bin is created with value BufferedReader( FileReader("signUp.txt")).
+			STEP 41 : PRINT "\n\t--- Please fill the Follwings --->\n".
+			STEP 42 : PRINT "\nEnter Username = ".
+			STEP 43 : STRING variable username is instantiated to value b.nextLine().
+			STEP 44 : PRINT "\nEnter Your Passcode = ".
+			STEP 45 : STRING variable upass is instantiated to value b.next().
+			STEP 46 : PRINT "\n\t~~ Welcome to Inventory Management System~~\n".
+			STEP 47 : PRINT "\n --- Select Item ---".
+		STEP 48 : CATCH(Exception eb).
+			STEP 49 : The function printStackTrace() from object eb is called.
+	STEP 50 : A method PUBLIC STATIC VOID main(String args[]) is created.
+		STEP 51 : An object of class Scanner cH is created with value Scanner(System.in).
+		STEP 52 : INT variable ch is declared.
+		STEP 53 : PRINT "\n\t~~~~~~~~~~~~~~~~~~~~~~".
+		STEP 54 : PRINT "\n\t\t\tInventory Management System".
+		STEP 55 : PRINT "\n\t----------------------------------------------------------------".
+		STEP 56 : PRINT "\n\t\t Batch: CSE-CS9 | 2nd Semester | (Year 2021)".
+		STEP 57 : PRINT "\n\t Group Members - Tanmaya, Himanshu, Prerna, Pranav".
+		STEP 58 : PRINT "\n\t~~~~~~~~~~~~~~~~~~~~~~\n".
+		STEP 59 : DO.
+			STEP 60 : PRINT "\n\n ----- Menu -----".
+			STEP 61 : PRINT "\n 1. New User / Sign Up \n 2. Purchase Item \n 3. Add Item \n 4. Delete Item \n 5. Update Item \n 6. Exit".
+			STEP 62 : PRINT "\n\nEnter your Choice -> ".
+			STEP 63 : ch ? cH.nextInt().
+			STEP 64 : SWITCH ch.
+				STEP 65 : CASE 1.
+				STEP 66 : An object of class User us is created with value User().
+				STEP 67 : The function signUp() from object us is called.
+				STEP 68 : BREAK.
+				STEP 69 : CASE 2.
+				STEP 70 : An object of class User purchase is created with value User().
+				STEP 71 : The function purchase_item() from object purchase is called.
+				STEP 72 : BREAK.
+				STEP 73 : DEFAULT.
+				STEP 74 : PRINT "\n\t--- Hope You Enjoyed Your Day! ---".
