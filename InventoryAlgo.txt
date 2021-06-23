@@ -1,74 +1,180 @@
 STEP 1 : This class is in PACKAGE basics.
 STEP 2 : IMPORT java.util.*.
 STEP 3 : IMPORT java.io.*.
-STEP 4 : A abstract class AbstractMethods is created.
-	STEP 5 : The member method abstract void signUp() is called.
-	STEP 6 : The member method abstract void purchase_item() is called.
-STEP 7 : A class User which inherits from class AbstractMethods is created.
-	STEP 8 : STRING ufname,uname.
-	STEP 9 : STRING pass,age.
-	STEP 10 : INT tno,mtchoice,mchoice.
-	STEP 11 : A method VOID signUp() is created.
-		STEP 12 : An object of class Scanner u is created with value Scanner(System.in).
-		STEP 13 : TRY.
-			STEP 14 : An object of class File f is created with value File("signUp.txt").
-			STEP 15 : An object of class FileWriter fout is created with value FileWriter(f).
-			STEP 16 : An object of class BufferedWriter bout is created with value BufferedWriter(fout).
-			STEP 17 : PRINT "\nYour Full Name is = ".
-			STEP 18 : ufname ? u.nextLine().
-			STEP 19 : The function write(ufname) from object bout is called.
-			STEP 20 : The function newLine() from object bout is called.
-			STEP 21 : PRINT "\nNow Please make a Username: ".
-			STEP 22 : uname ? u.next().
-			STEP 23 : The function write(uname) from object bout is called.
-			STEP 24 : The function newLine() from object bout is called.
-			STEP 25 : PRINT "\nCreate a Password = ".
-			STEP 26 : pass ? u.next().
-			STEP 27 : The function write(pass) from object bout is called.
-			STEP 28 : The function newLine() from object bout is called.
-			STEP 29 : PRINT "\nEnter Your Age = ".
-			STEP 30 : age ? u.next().
-			STEP 31 : The function write(age) from object bout is called.
-			STEP 32 : The function newLine() from object bout is called.
-			STEP 33 : PRINT "\n\n\t--- Thanks for your sign up ---".
-			STEP 34 : The function close() from object bout is called.
-		STEP 35 : CATCH(Exception e).
-			STEP 36 : The function printStackTrace() from object e is called.
-	STEP 37 : A method VOID purchase_item() is created.
-		STEP 38 : An object of class Scanner b is created with value Scanner(System.in).
+STEP 4 : A class Inventory is created.
+	STEP 5 : A PRIVATE STATIC STRING variable medicine is declared.
+	STEP 6 : A PRIVATE STATIC STRING variable stationary is declared.
+	STEP 7 : A method PUBLIC STATIC VOID main(String args[]) is created.
+		STEP 8 : An object of class Object k is instantiated to value loadList("userDetail.obj").
+		STEP 9 : User.userDetail=(ArrayList<User>)k.
+		STEP 10 : The object The variable userDetail of object User is initialized to value ArrayList<User>().
+		STEP 11 : The member method Menu1() is called.
+	STEP 12 : A method STATIC VOID Menu1() is created.
+		STEP 13 : An object of class Scanner cH is created with value Scanner(System.in).
+		STEP 14 : INT variable ch is declared.
+		STEP 15 : PRINT "\n\t~~~~".
+		STEP 16 : PRINT "\n\t\t\tInventory Management System".
+		STEP 17 : PRINT "\n\t----------------------------------------------------------------".
+		STEP 18 : PRINT "\n\t\t Batch: CSE-CS9 | 2nd Semester | (Year 2021)".
+		STEP 19 : PRINT "\n\t Group Members - Tanmaya,Himanshu,Prerna,Pranav".
+		STEP 20 : PRINT "\n\t~~~~\n".
+		STEP 21 : PRINT "\n\n ----- Menu -----".
+		STEP 22 : PRINT "\n 1. New User / Sign Up \n 2. Purchase Item \n 3. Exit".
+		STEP 23 : PRINT "\n\nEnter your Choice -> ".
+		STEP 24 : ch ? cH.nextInt().
+		STEP 25 : SWITCH ch.
+			STEP 26 : CASE 1.
+			STEP 27 : The member method Register() is called.
+			STEP 28 : BREAK.
+			STEP 29 : CASE 2.
+			STEP 30 : The member method login() is called.
+			STEP 31 : BREAK.
+			STEP 32 : CASE 3.
+			STEP 33 : The function exit(0) from object System is called.
+			STEP 34 : BREAK.
+			STEP 35 : DEFAULT.
+				STEP 36 : PRINT "\n\twrong choice...".
+				STEP 37 : The method Menu1();} is called.
+	STEP 38 : A method STATIC VOID saveList(Object o,String s) is created.
 		STEP 39 : TRY.
-			STEP 40 : An object of class BufferedReader bin is created with value BufferedReader( FileReader("signUp.txt")).
-			STEP 41 : PRINT "\n\t--- Please fill the Follwings --->\n".
-			STEP 42 : PRINT "\nEnter Username = ".
-			STEP 43 : STRING variable username is instantiated to value b.nextLine().
-			STEP 44 : PRINT "\nEnter Your Passcode = ".
-			STEP 45 : STRING variable upass is instantiated to value b.next().
-			STEP 46 : PRINT "\n\t~~ Welcome to Inventory Management System~~\n".
-			STEP 47 : PRINT "\n --- Select Item ---".
-		STEP 48 : CATCH(Exception eb).
-			STEP 49 : The function printStackTrace() from object eb is called.
-	STEP 50 : A method PUBLIC STATIC VOID main(String args[]) is created.
-		STEP 51 : An object of class Scanner cH is created with value Scanner(System.in).
-		STEP 52 : INT variable ch is declared.
-		STEP 53 : PRINT "\n\t~~~~~~~~~~~~~~~~~~~~~~".
-		STEP 54 : PRINT "\n\t\t\tInventory Management System".
-		STEP 55 : PRINT "\n\t----------------------------------------------------------------".
-		STEP 56 : PRINT "\n\t\t Batch: CSE-CS9 | 2nd Semester | (Year 2021)".
-		STEP 57 : PRINT "\n\t Group Members - Tanmaya, Himanshu, Prerna, Pranav".
-		STEP 58 : PRINT "\n\t~~~~~~~~~~~~~~~~~~~~~~\n".
-		STEP 59 : DO.
-			STEP 60 : PRINT "\n\n ----- Menu -----".
-			STEP 61 : PRINT "\n 1. New User / Sign Up \n 2. Purchase Item \n 3. Add Item \n 4. Delete Item \n 5. Update Item \n 6. Exit".
-			STEP 62 : PRINT "\n\nEnter your Choice -> ".
-			STEP 63 : ch ? cH.nextInt().
-			STEP 64 : SWITCH ch.
-				STEP 65 : CASE 1.
-				STEP 66 : An object of class User us is created with value User().
-				STEP 67 : The function signUp() from object us is called.
-				STEP 68 : BREAK.
-				STEP 69 : CASE 2.
-				STEP 70 : An object of class User purchase is created with value User().
-				STEP 71 : The function purchase_item() from object purchase is called.
-				STEP 72 : BREAK.
-				STEP 73 : DEFAULT.
-				STEP 74 : PRINT "\n\t--- Hope You Enjoyed Your Day! ---".
+			STEP 40 : An object of class File f is created with value File(s).
+			STEP 41 : An object of class FileOutputStream op is created with value FileOutputStream(f).
+			STEP 42 : An object of class ObjectOutputStream oos is created with value ObjectOutputStream(op).
+			STEP 43 : The function writeObject(o) from object oos is called.
+			STEP 44 : PRINTLN "file saved succesfuly".
+		STEP 45 : PRINTLN e.
+		STEP 46 : The function printStackTrace() from object e is called.
+STEP 47 : A method STATIC OBJECT loadList(String s) is created.
+	STEP 48 : TRY.
+		STEP 49 : An object of class File f is created with value File(s).
+		STEP 50 : An object of class FileInputStream op is created with value FileInputStream(f).
+		STEP 51 : An object of class ObjectInputStream oos is created with value ObjectInputStream(op).
+		STEP 52 : An object of class Object o is instantiated to value oos.readObject().
+		STEP 53 : PRINTLN "file read succesfuly".
+		STEP 54 : RETURN o.
+	STEP 55 : PRINTLN e.
+	STEP 56 : RETURN null.
+STEP 57 : A method PUBLIC STATIC VOID Register() is created.
+STEP 58 : An object of class User A is created with value User().
+STEP 59 : User.userDetail.add(A) is performed respectively.
+STEP 60 : saveList(User.userDetail,"userDetail.obj") is performed respectively.
+STEP 61 : The member method Menu1() is called.
+STEP 62 : A method PUBLIC STATIC VOID login() is created.
+STEP 63 : An object of class Scanner sc is created with value Scanner(System.in).
+STEP 64 : STRING variable x is declared.
+STEP 65 : STRING variable y is declared.
+STEP 66 : PRINTLN "enter your username : ".
+STEP 67 : x=sc.next().
+STEP 68 : PRINTLN "Enter your passowrd : ".
+STEP 69 : y=sc.next().
+STEP 70 : IF x.equals(User.userDetail.get(0).username)&& y.equals(User.userDetail.get(0).pass).
+STEP 71 : The member method purchase_item() is called.
+STEP 72 : ELSE.
+	STEP 73 : PRINTLN "Wrong username and password entered ".
+	STEP 74 : The member method login() is called.
+STEP 75 : A method STATIC VOID purchase_item() is created.
+STEP 76 : TRY.
+	STEP 77 : An object of class Scanner sc is created with value Scanner(System.in).
+	STEP 78 : An object of class File f1 is created with value File("tData.txt").
+	STEP 79 : An object of class BufferedWriter bw1 is created with value BufferedWriter( FileWriter(f1)).
+	STEP 80 : PRINT "\nLogin Successful \n SELECT Type ---> ?".
+	STEP 81 : PRINT "\n1. medicine \n2. stationary".
+	STEP 82 : PRINT "\n\nEnter Your Choice -> ".
+	STEP 83 : INT variable mtchoice is declared.
+	STEP 84 : mtchoice ? sc.nextInt().
+	STEP 85 : INT variable sum is instantiated to value 0.
+	STEP 86 : INT variable qt is declared.
+	STEP 87 : SWITCH mtchoice.
+		STEP 88 : CASE 1.
+			STEP 89 : PRINT "\n--- Available medicine | Select ---> ?\n".
+			STEP 90 : PRINT "\n1. PCM \n2. AVIL \n3. CITRIZEN".
+			STEP 91 : PRINT "\n\nEnter Choice -> ".
+			STEP 92 : INT variable mchoice is declared.
+			STEP 93 : mchoice ? sc.nextInt().
+			STEP 94 : SWITCH mchoice.
+				STEP 95 : CASE 1.
+					STEP 96 : {medicine is instantiated with values "PCM(Rs.100)".
+					STEP 97 : PRINT "\n quantity---> ?".
+					STEP 98 : qt ? sc.nextInt().
+					STEP 99 : bw1.write("quantity ? "+qt+"\n").
+					STEP 100 : sum=sum+(qt*100).
+					STEP 101 : PRINT "\n Total Amount to be paid:"+sum.
+				STEP 102 : BREAK.
+				STEP 103 : CASE 2.
+					STEP 104 : {medicine is instantiated with values "AVIL(Rs.100)".
+					STEP 105 : PRINT "\n quantity---> ?".
+					STEP 106 : qt ? sc.nextInt().
+					STEP 107 : bw1.write("quantity ? "+qt+"\n").
+					STEP 108 : sum=sum+(qt*100);}.
+				STEP 109 : BREAK.
+				STEP 110 : CASE 3.
+					STEP 111 : {medicine is instantiated with values "CITRIZEN(Rs.100".
+					STEP 112 : PRINT "\n quantity---> ?".
+					STEP 113 : qt ? sc.nextInt().
+					STEP 114 : bw1.write("quantity ? "+qt+"\n").
+					STEP 115 : sum=sum+(qt*100).
+				STEP 116 : BREAK.
+				STEP 117 : DEFAULT.
+				STEP 118 : PRINT "\n\t.... medicine ....".
+			STEP 119 : The function write("Inventory Type - medicine | medicine Name: "+medicine+"\n");} from object bw1 is called.
+		STEP 120 : BREAK.
+		STEP 121 : CASE 2.
+			STEP 122 : PRINT "\n--- Available stationary | Select ---> ?\n".
+			STEP 123 : PRINT "\n1. pen \n2. books \n3. paper clip".
+			STEP 124 : PRINT "\n\nEnter Choice -> ".
+			STEP 125 : INT variable mchoice is declared.
+			STEP 126 : mchoice ? sc.nextInt().
+			STEP 127 : SWITCH mchoice.
+				STEP 128 : CASE 1.
+					STEP 129 : {stationary is instantiated with values "pen(Rs.10)".
+					STEP 130 : PRINT "\n quantity---> ?".
+					STEP 131 : qt ? sc.nextInt().
+					STEP 132 : bw1.write("quantity ? "+qt+"\n").
+					STEP 133 : sum=sum+(qt*10).
+					STEP 134 : PRINT "\n Total Amount to be paid:"+sum.
+				STEP 135 : BREAK.
+				STEP 136 : CASE 2.
+					STEP 137 : {stationary is instantiated with values "books(Rs.100)".
+					STEP 138 : PRINT "\n quantity---> ?".
+					STEP 139 : qt ? sc.nextInt().
+					STEP 140 : bw1.write("quantity ? "+qt+"\n").
+					STEP 141 : sum=sum+(qt*100).
+					STEP 142 : PRINT "\n Total Amount to be paid:"+sum.
+				STEP 143 : BREAK.
+				STEP 144 : CASE 3.
+					STEP 145 : {stationary is instantiated with values "paper clip(Rs.10)".
+					STEP 146 : PRINT "\n quantity---> ?".
+					STEP 147 : qt ? sc.nextInt().
+					STEP 148 : bw1.write("quantity ? "+qt+"\n").
+					STEP 149 : sum=sum+(qt*10).
+					STEP 150 : PRINT "\n Total Amount to be paid:"+sum.
+				STEP 151 : BREAK.
+				STEP 152 : DEFAULT.
+				STEP 153 : PRINT "\n\t.... stationary ....".
+			STEP 154 : The function write("Inventory Type - stationary | stationary: "+stationary+"\n") from object bw1 is called.
+			STEP 155 : The function write("amount to be paied for inventory"+sum);} from object bw1 is called.
+		STEP 156 : BREAK.
+		STEP 157 : CASE 3.
+			STEP 158 : PRINT "\n\tThanks for visiting".
+		STEP 159 : BREAK.
+		STEP 160 : DEFAULT.
+		STEP 161 : PRINT "\n\n\t\t** Invalid Choice **".
+STEP 162 : CATCH(Exception e).
+	STEP 163 : PRINTLN 'Blank Line'.
+	STEP 164 : The function printStackTrace() from object e is called.
+STEP 165 : A class User which implements an interface Serializable is created.
+STEP 166 : A PRIVATE STATIC FINAL LONG variable serialVersionUID is instantiated to value 1L.
+STEP 167 : STRING variable name is declared.
+STEP 168 : STRING variable username is declared.
+STEP 169 : STRING variable pass is declared.
+STEP 170 : A STATIC object of class ArrayList<User> userDetail is created with value ArrayList<User>().
+STEP 171 : The method User() is called.
+	STEP 172 : An object of class Scanner sc is created with value Scanner(System.in).
+	STEP 173 : PRINTLN "enter your name : ".
+	STEP 174 : name=sc.next().
+	STEP 175 : PRINTLN "enter your username : ".
+	STEP 176 : username=sc.next().
+	STEP 177 : PRINTLN "Create your password : ".
+	STEP 178 : pass=sc.next().
+	STEP 179 : PRINTLN "Registration Successful".
+	STEP 180 : The function add(this) from object userDetail is called.
